@@ -1,15 +1,25 @@
+html {
+  position: relative;
+  min-height: 100%; }
+
 body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
+  padding-top: 70px;
+  width: auto;
+  padding-bottom: 5rem; }
+
+.intro {
+  padding: 3rem 1.5rem;
   text-align: center; }
 
-a {
-  color: rgba(0, 0, 0, 0.7); }
-  a:focus, a:hover {
-    color: rgba(0, 0, 0, 0.6); }
+.container {
+  width: auto;
+  max-width: 650px;
+  padding: 0 15px; }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem; }
+.sidebar-module {
+  padding: 1rem; }
+
+.sidebar-module-inset {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 1rem; }
