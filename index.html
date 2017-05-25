@@ -1,29 +1,106 @@
 <!doctype html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="ryought">
+    <meta name="description" content="ryought lab : ryought.github.io">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Welcome to Middleman</title>
-    <link href="/stylesheets/site.css" rel="stylesheet" />
-    <script src="/javascripts/site.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="js/site.js"></script>
   </head>
   <body>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" class="middleman-logo" aria-labelledby="middleman-logo__title" role="img">
-  <title id="middleman-logo__title">Middleman</title>
-  <path class="middleman-logo__top-left-bar" fill-opacity=".45" d="M0 40L200 0v30L0 60z"/>
-  <path class="middleman-logo__top-right-bar" fill="#fff" d="M200 0l200 40v20L200 30z"/>
-  <path class="middleman-logo__left-m" fill-opacity=".45" d="M0 78v184l45 5V152l45 83 47-83v129l53 7V52l-57 8-43 83-43-70z"/>
-  <path class="middleman-logo__right-m" fill="#fff" d="M400 78v184l-45 5V152l-45 83-47-83v129l-53 7V52l57 8 43 83 43-70z"/>
-  <path class="middleman-logo__bottom-left-bar" fill-opacity=".45" d="M0 300l200 40v-30L0 280z"/>
-  <path class="middleman-logo__bottom-right-bar" fill="#fff" d="M200 340l200-40v-20l-200 30z"/>
-</svg>
+    <!-- navbar -->
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <div class="navbar-header"> 
+      <a class="navbar-brand" href="#"> ryought::lab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#about">Logs</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+             role="button" aria-haspopup="true" aria-expanded="false">
+            Product <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">BioInfo</li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">More Codes</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<h1>
-  Middleman is Running
-</h1>
+
+<div class="container">      
+  <!-- contents -->
+  
+  <div class="jumbotron">
+    <h2>ryought.github.io</h2>
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img src="img/icon.jpg" class="media-object img-circle"
+               width="100px">
+        </a>
+      </div>
+      <div class="media-body">
+        <p class="lead text-muted">welcome to ryought::lab</p>
+        <p>ようこそ</p>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="row">
+    <div class="col-md-7 col-xs-12">
+      <h1>もくじ <span class="small">contents</span></h1>
+      <p>こんにちは(<code>hello world</code>)</p>
+      <ul>
+        <li><a href="#">about me</a></li>
+        <li><a href="train.html">時刻表</a></li>
+        <li><a href="form.html">委任状</a></li>
+      </ul>
+    </div>
+    <div class="col-md-5 col-xs-12">
+      <div class="sidebar-module sidebar-module-inset">
+        <h4>わたし <span class="small">about me</span></h4>
+        <h5>ryought</h5>
+        <ul>
+          <li>所属</li> UT B3 BioInfo9
+          <li>email</li> ryonakabayashi[あっと]gmail.com
+          <li>github
+            <a href="https://github.com/ryought">ryought</a></li>
+          <li>twitter
+            <a href="https://twitter.com/ryought">@ryought</a></li>
+        </ul>
+        <a href="" class="btn btn-default">詳しく</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <a href="https://middlemanapp.com/basics/templating_language/" target="_blank">Read Documentation</a>
 
