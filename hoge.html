@@ -8,7 +8,7 @@
     <meta name="author" content="ryought">
     <meta name="description" content="ryought lab : ryought.github.io">
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title>Home - ryought::lab</title>
+    <title>page - ryought::lab</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -54,52 +54,8 @@
 
     
     <div class="container">
-      
-
-<div class="jumbotron">
-  <h2>ryought.github.io</h2>
-  <div class="media">
-    <div class="media-left">
-      <a href="#">
-        <img src="img/icon.jpg" class="media-object img-circle"
-             width="100px">
-      </a>
-    </div>
-    <div class="media-body">
-      <p class="lead text-muted">welcome to ryought::lab</p>
-      <p>ようこそ</p>
-    </div>
-  </div>
-</div>
-
-
-<div class="row">
-  <div class="col-md-7 col-xs-12">
-    <h1>もくじ <span class="small">contents</span></h1>
-    <p>こんにちは(<code>hello world</code>)</p>
-    <ul>
-      <li><a href="#">about me</a></li>
-      <li><a href="train.html">時刻表</a></li>
-      <li><a href="form.html">委任状</a></li>
-      <li><a href="test.html">markdown test</a></li>
-      <li><a href="hoge.html">hoge</a></li>
-    </ul>
-  </div>
-  <div class="col-md-5 col-xs-12">
-    <div class="sidebar-module sidebar-module-inset">
-      <h4>わたし <span class="small">about me</span></h4>
-      <h5>ryought</h5>
-      <ul>
-        <li>所属</li> UT B3 BioInfo9
-        <li>email</li> ryonakabayashi[あっと]gmail.com
-        <li>github
-          <a href="https://github.com/ryought">ryought</a></li>
-        <li>twitter
-          <a href="https://twitter.com/ryought">@ryought</a></li>
-      </ul>
-      <a href="" class="btn btn-default">詳しく</a>
-    </div>
-  </div>
+      <div>
+  <h1>hoge</h1>
 </div>
 
 <!-- google analytics -->
@@ -109,8 +65,15 @@
                           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
  ga('create', 'UA-100501659-1', 'auto');
- ga('set', 'dimension1', '1232');
- ga('send', 'pageview');
+ ga('send', {
+   hitType: 'event',
+   eventCategory: 'Videos',
+   eventAction: 'play',
+   eventLabel: 'Fall Campaign'
+ });
+ ga('send', 'pageview', {
+   'dimension1': '1552'
+ });
 </script>
 
     </div>
