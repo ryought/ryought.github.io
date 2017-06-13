@@ -60,16 +60,27 @@
 <script type="text/javascript" src="js/hashpass.js"></script>
 
 
-<p class="small-bottom-margin">Domain:</p>
-<input id="domain" class="small-top-margin" type="text" onchange="update()"/>
-<p class="small-bottom-margin">Key:</p>
-<input id="key" class="small-top-margin" type="password" onchange="update()"/>
-<p class="small-bottom-margin">Hash:</p>
-<input id="hash" class="small-top-margin" type="text" readonly="true" />
-<!-- Trigger -->
-<button class="btn" data-clipboard-target="#hash">
-  Copy to clipboard
-</button>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Domain</span>
+  <input id="domain" class="form-control" type="text"
+         area-describedby="basic-addon1" onchange="update()"/>
+</div>
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon2">Key</span>
+  <input id="key" class="form-control" type="password"
+         area-describedby="basic-addon2" onchange="update()"/>
+</div>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon3">Hash</span>
+  <input id="hash" class="form-control" type="text"
+         area-describedby="basic-addon3" readonly="true"/>
+  <span class="input-group-btn">
+    <button class="btn btn-default" data-clipboard-target="#hash"
+            type="button">Copy</button>
+  </span>
+</div>
+
 <p id="message">&nbsp;</p>
 
 <script type="text/javascript">
