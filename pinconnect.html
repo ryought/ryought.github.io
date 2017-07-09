@@ -23,7 +23,14 @@
       
 <script type="text/javascript">
     function kakunin(){
-        location.href= "http://pinconnect.com?date=0724&title=おまつり&lat=10&lng=10";
+      //location.href= "http://pinconnect.com?date=0724&title=おまつり&lat=10&lng=10";
+      var url = new URL(window.location.href);
+      var date = url.searchParams.get("date");
+      var title = url.searchParams.get("title");
+      var lat = url.searchParams.get("lat");
+      var lng = url.searchParams.get("lng");
+      console.log("http://pinconnect.com?date="+date+"&title="+title)
+      location.href="http://pinconnect.com?date="+date+"&title="+title+"&lat="+lat+"&lng="+lng;
     }
 </script>
 <form name="test">
