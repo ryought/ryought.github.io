@@ -8,7 +8,7 @@
     <meta name="author" content="ryought">
     <meta name="description" content="ryought lab : ryought.github.io">
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title>Hashpass - ryought::lab</title>
+    <title>page - ryought::lab</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -58,41 +58,27 @@
 
     
     <div class="container">
-      
-<script type="text/javascript" src="js/sjcl.js"></script>
-<script tyoe="text/javascript" src="js/clipboard.js"></script>
-<script type="text/javascript" src="js/hashpass.js"></script>
+      <div>
+  <h1>つくったもの <span class="small">products</span></h1>
 
+  <h2>Software</h2>
+  <h3>Hashpass web edition</h3>
 
-<div class="input-group">
-  <span class="input-group-addon" id="basic-addon1">Domain</span>
-  <input id="domain" class="form-control" type="text"
-         area-describedby="basic-addon1" onchange="update()"/>
+  <h2>Hardware</h2>
+
+  <h3>自作ドローン mbed Quadcopter</h3>
+  <a href="https://developer.mbed.org/users/ryought/notebook/qrdrone"/>詳細</a>
+  <a href="https://developer.mbed.org/users/ryought/notebook/qrdronembed_quadcopter-building-log/">QRdrone(mbed_quadcopter) building log</a>
+
+  mbedで作成した自作ドローン
+
+  <h3>Felicaでドアロック</h3>
+  <a href="https://developer.mbed.org/users/ryought/notebook/RFID_doorlock/">詳細</a>
+  部室の鍵を、定期券のFelicaで認証して開けるやつ。Felicaなので窓越しでタッチできて、ドアへの加工がいらない。
+
+  <h2>Music</h2>
+  <h3>Irish traditional</h3>
 </div>
-
-<div class="input-group">
-  <span class="input-group-addon" id="basic-addon2">Key</span>
-  <input id="key" class="form-control" type="password"
-         area-describedby="basic-addon2" onchange="update()"/>
-</div>
-<div class="input-group">
-  <span class="input-group-addon" id="basic-addon3">Hash</span>
-  <input id="hash" class="form-control" type="text"
-         area-describedby="basic-addon3" readonly="true"/>
-  <span class="input-group-btn">
-    <button class="btn btn-default" data-clipboard-target="#hash"
-            type="button">Copy</button>
-  </span>
-</div>
-
-<p id="message">&nbsp;</p>
-
-<script type="text/javascript">
- // clipboard.js
- var clipboard = new Clipboard('.btn');
- // set to domain default(referrer) value
- //$('#domain').val(document.referrer)
-</script>
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
