@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Ryought::Lab Home" 
+title: "Home" 
 permalink: /
 header:
   overlay_color: "#000"
