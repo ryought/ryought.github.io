@@ -14,11 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: ryought::lab
+title_separator: "|"
 email: ryonakabayashi@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   An amazing website
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://ryought.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ryought.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 breadcrumbs: true
 twitter_username: ryought
 github_username:  ryought
@@ -34,17 +35,20 @@ author:
   github: "ryought"
   twitter: "ryought"
 
-
+# 投稿のコメント欄 disqusを使う
 comments:
   provider: "disqus"
   disqus:
     shortname: "ryought-lab"
 
+# 検索機能
+search: true
+
 # Build settings
 markdown: kramdown
-# theme: minima
+
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "dark"
+minimal_mistakes_skin: "neon"
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -54,25 +58,27 @@ plugins:
 
 permalink: /logs/:title/
 paginate: 5
-paginate_path: /page:num/
+paginate_path: /logs/page:num
 
-#   # _posts
-#   - scope:
-#       path: ""
-#       type: posts
-#       values:
-#       layout: single
-#       read_time: true
-#       comments: true
-#       share: true
-#       related: true
+
+defaults:
+  # _postsの投稿全てに適用される
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      read_time: true
+      comments: true
+      share: true
+      related: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 include:
   - .htaccess
-  - _pages
+  - _pages/
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -81,7 +87,6 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - old/
+  - old/  # old ryought::lab website sources
   - README.md
-  - minimal-mistakes-master/
 encoding: "utf-8"
