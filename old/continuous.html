@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="ryought">
+    <meta name="description" content="ryought::lab | ryought - Ryo Nakabayashi | UTbioinfo B3">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>markdown test - ryought::lab</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+    </script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="js/site.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">ryought::lab</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="test.html">Logs</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Product <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="product.html">一覧</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="hashpass.html">Hashpass</a></li>
+            <li><a href="#">時間割追加 gcal-timetabler</a></li>
+            <li><a href="icons.html">アイコン集</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">BioInfo</li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">More Codes</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    
+    <div class="container">
+      <h1 id="toc_0">連続系アルゴリズム</h1>
+
+<h1 id="toc_1">1. 浮動小数の誤差について</h1>
+
+<h1 id="toc_2">2.</h1>
+
+<h1 id="toc_3">3. ルンゲクッタ法</h1>
+
+<h2 id="toc_4">常微分方程式の初期値問題</h2>
+
+<p>常微分方程式の初期値問題 $\frac{dy(x)}{dx} = f(x,y)$を, 初期値$y(0) = y_0$の下で$x=0, X$まで解く．</p>
+
+<p>高階常微分方程式の場合は，連立に帰着できる．$\frac{d^2y(x)}{dx} = f(x,y)$なら，$\frac{dy}{dx} = u, \frac{du}{dx} = f(x,y)$としたらいい．</p>
+
+<h2 id="toc_5">離散変数法</h2>
+
+<p>点$0, x<em>1, &hellip;, x</em>m=X$を選んで，そこでの関数値$y(x<em>1), &hellip;, y(x</em>m)$を近似的に求める．
+基本的には$x<em>1 = h, x</em>2 = 2h, &hellip;, x_n=nh=X$と等間隔に取る．($h$を刻み幅という)</p>
+
+<p>以下，$y(x<em>i)$の近似値を$y</em>i$と書く．
+この各点に関して$x_{n+1}$を求める方法が色々ある．</p>
+
+<h3 id="toc_6">前進Euler法</h3>
+
+<p>$y<em>{n+1} = y</em>n + hf(x<em>n, y</em>n)$</p>
+
+<h4 id="toc_7">局所誤差(各点での厳密解との誤差)</h4>
+
+<p>$x<em>{n+1} = x</em>n + h$を使って，$y$をTaylor展開すると，$y(x<em>{n+1}) = y(x</em>n) + h \frac{dy(x<em>n)}{dx} + O(h^2) = y(x</em>n) + h f(x<em>n, y(x</em>n)) + O(h^2)$．</p>
+
+<p>厳密値 $y(x<em>{n+1}) = y(x</em>n) + h f(x<em>n, y(x</em>n)) + O(h^2)$
+近似値 $y<em>{n+1} = y</em>n + hf(x<em>n, y</em>n)$</p>
+
+<p>$y<em>n = y(x</em>n)$($n$における近似値が正確)ならば，$| y<em>{n+1} - y(x</em>{n+1}) | = O(h^2)$となる．これは<strong>1次の解法</strong>と呼ばれる．</p>
+
+<h4 id="toc_8">大域誤差(区間の端から端で積もった誤差の合計)</h4>
+
+<p>仮定 $|f(x,y) - f(x,z)| \leq L |y-z|$(Lipschitz連続), $|y&#39;&lsquo;(x)| \leq 2M$, $L,M$:正定数</p>
+
+<p>誤差$e<em>n = y</em>n - y(x_n)$とおく</p>
+
+<p>$e<em>{n+1} = y</em>{n+1} - y(x<em>{n+1}) = (y</em>n + hf(x<em>n, y</em>n)) - (y(x<em>n) + hy&rsquo;(x</em>n) + \frac{h^2}{2} y&#39;&lsquo;(\xi<em>n)) = (y</em>n - y(x<em>n)) + h(f(x</em>n, y<em>n) - f(x</em>n, y(x<em>n))) - \frac{h^2}{2} y&rsquo;&lsquo;(\xi</em>n)$</p>
+
+<p>$|e<em>{n+1}| \leq |e</em>n| + h | f(x<em>n, y</em>n) - f(x<em>n, y(x</em>n)) | + \frac{h^2}{2} | y&rsquo;&lsquo;(\xi<em>n) | \leq |e</em>n| + hL |e_n| + h^2 M$</p>
+
+<p>$e<em>0 = 0$とすると，$|e</em>n| \leq \frac{Mh}{L} ((1+hL)^n -1) \leq h \frac{M}{L} e^{Lnh}$, ($(1+x)^n \leq e^{xn}$より)．</p>
+
+<p>$x<em>n = X$での誤差は,$|e</em>n| \leq h \frac{M}{L} e^{LX} = O(h)$ (1次の解法 とした所以)</p>
+
+<p>$h\to 0$で真の解に近づくことがわかる．</p>
+
+<h3 id="toc_9">Runge-Kutta法</h3>
+
+<p>$y<em>{n+1} = y</em>n + h \sum<em>{i=1}^s b</em>i k<em>i, k</em>i = f(x<em>n + c</em>ih, y<em>n + \sum</em>{i=1}^s a<em>{ij} k</em>j)$</p>
+
+<p>$s$:段数
+通常$\sum<em>i b</em>i = 1, \sum<em>j a</em>{ij} = c_i$</p>
+
+<p>Butcher配列という行列で表せる．$\begin{pmatrix}c &amp; A \ &amp; b^\top \end{pmatrix}$</p>
+
+<p>この特殊例として，いくつか種類がある．</p>
+
+<h3 id="toc_10">後退Euler法</h3>
+
+<p>$y<em>{n+1} = y</em>n + h f(x<em>{n+1}, y</em>{n+1})$</p>
+
+<p>$y_{n+1}$についての方程式をとく必要がある．</p>
+
+<h3 id="toc_11">修正Euler法</h3>
+
+<p>$k<em>1 = f(x</em>n, y<em>n), k</em>2 = f(x<em>n + \frac{h}{2}, y</em>n + \frac{h}{2} k<em>1)$として，$y</em>{n+1} = y<em>n + h k</em>2$</p>
+
+<p>$k<em>1$は開始点$(x</em>n, y<em>n)$での傾き,$k</em>2$は$(x<em>n + \frac{h}{2}, y</em>n + \frac{h}{2} k<em>1)$での傾き，つまり$k</em>1$の傾きで$(x<em>n, y</em>n)$からの線形近似をした時の$x_n+\frac{h}{2}$(区間中間)の点での傾き．</p>
+
+<h3 id="toc_12">改良Euler法</h3>
+
+<p>$k<em>1 = f(x</em>n, y<em>n), k</em>2 = f(x<em>n + h, y</em>n + h k<em>1)$として，$y</em>{n+1} = y<em>n + h\frac{k</em>1 + k_2}{2}$</p>
+
+<p>上の修正Euler法で，$x_n+h$まで進めるバージョン</p>
+
+<h3 id="toc_13">RK法</h3>
+
+<p>局所誤差が$O(h^{p+1})$の時，$p$次の解法という．1次以上の時「適合的」といい，$h\to 0$で解に収束する.$\sum<em>i b</em>i = 1$で成立</p>
+
+<p>「陽的」:$A$が狭義下三角．方程式を解かなくていいということ．それ以外は「陰的」と言われる．</p>
+
+<p>陽的RK法の次数
+段 1 2 3 4 6 7 9 11
+次数 1 2 3 4 5 6 7 8</p>
+
+<p>陰的RK法の次数: $s$段で$2s$次．</p>
+
+<h2 id="toc_14">線形安定性解析</h2>
+
+<p>常微分方程式の初期値問題として，線形関数$f(x,y) = \lambda y, \lambda \in \mathbb{C}$を考える．
+解析解は$y = \exp(\lambda x)$.</p>
+
+<p>$y<em>{n+1} = R(\lambda h) y</em>n$($R(.)$:多項式)の形にすると，$|R(\bar{h})| &gt; 1$で発散，$|R(\bar{h})| &lt; 1$で収束．</p>
+
+<p>$R(\bar{h}) &lt; 1, \bar{h} = \lambda h$を複素平面上に描く．</p>
+
+<p>定義：絶対安定領域が左半平面を含む時，<strong>A安定</strong> であるという．
+定理：陽的RK法はA安定でない．s段2s次陰的RK法でA安定なものがある．</p>
+
+<h3 id="toc_15">例:Euler法</h3>
+
+<p>$f(x,y) = \lambda y$とすると，$u<em>{n+1} = u</em>n + \lambda h u_n$より，$R(\lambda h) = 1 + \lambda h$．$1 + \bar{h} = r e^{i\theta}$とおいた時に，求める領域は$r &lt; 1$となる$\bar{h}$がいる領域．したがって$\bar{h} = re^{i\theta} - 1, r&lt;1$より，$(-1, 0)$を中心とする半径1の円．</p>
+
+<p>stability.pdfがわかりやすい．</p>
+
+<p>刻み幅制御：誤差を推定しながら，刻み幅を動的に変える．</p>
+
+<h1 id="toc_16">4. 乱数</h1>
+
+<h2 id="toc_17">一様乱数</h2>
+
+<p>スライド参照</p>
+
+<h2 id="toc_18">その他の分布に従う乱数</h2>
+
+<p>$p(x)$:確率密度関数 に従う乱数を作る．</p>
+
+<h3 id="toc_19">逆関数法</h3>
+
+<p>$f(x) = \int_{-\infty}^x p(t)dt$について，$f^{-1}(x)$が作れる時のみ使える．</p>
+
+<ol>
+<li>$(0,1)$の一様乱数$u$を作る($u=0,1$は捨てる)</li>
+<li>$f^{-1}(u) = x$とした$x$を返す.</li>
+</ol>
+
+<h3 id="toc_20">棄却法</h3>
+
+<p>$p(x) \leq \mu q(x)$となる定数$\mu$, 分布$q(x)$を作る．</p>
+
+<ol>
+<li>$q(x)$に従う乱数$x$と，$[0,1)$の一様乱数$u$を作る</li>
+<li>$\mu q(x) u \leq p(x)$ならば採択し，$x$を返す．そうでなければ棄却して1に戻る.</li>
+</ol>
+
+<h3 id="toc_21">Box-Muller法</h3>
+
+<p>一様乱数から独立な正規分布に従う2乱数を作る方法</p>
+
+<p>中心極限定理を使って,乱数の平均を取ってくるのも簡易的だがあり.</p>
+
+<h3 id="toc_22">別名法 alias method</h3>
+
+<p>離散分布の時.</p>
+
+<h2 id="toc_23">乱数の利用:モンテカルロ法</h2>
+
+<p>積分の近似値</p>
+
+<h1 id="toc_24">5. 多項式のべき表現</h1>
+
+<p>べき表現$p(x) = a<em>o + a</em>1x+a<em>2x^2 + &hellip;$
+次数$n$，係数$a</em>i$,浮動小数</p>
+
+<h2 id="toc_25">問題1: 代入</h2>
+
+<p>次数$n$と係数$a_i$が与えられた時,実数$x$に対して$p(x)$を求める．</p>
+
+<h3 id="toc_26">ナイーブな実装</h3>
+
+<p>$\sum<em>{k=0}^n a</em>k x^k$
+$x,x^2, &hellip;$と順番に計算する．乗算$a_i x^i$をして，和を求める. 
+演算数は乗算$2n-1$, 加算$n$</p>
+
+<h3 id="toc_27">Horner method(nested multiplication)</h3>
+
+<p>$(((a<em>4x + a</em>3)x + a<em>2)x + a</em>1)x + a<em>0$
+$a</em>i$までの和に,$x$をかけて$a_{i-1}$を足す作業を繰り返す感じ</p>
+
+<p>プログラムで書くと下．
+<code>C
+v = a[n];
+for (k=n-1; k&gt;=0; k--) {
+    v = v*x + a[k];
+}
+return v;
+</code>
+演算数は乗算$n$，加算$n$(ループ回数が$n$)．</p>
+
+<p>並列に計算できなくなるが,誤差も少なくなる</p>
+
+<h2 id="toc_28">問題2: 多項式補間,多項式を求める</h2>
+
+<p>$n$個の点${x<em>i}</em>{i=1}^n$と，それぞれの点での多項式のとる値$v<em>i = p(x</em>i)$が与えられている時,$n-1$次多項式$p(x)$を求める．</p>
+
+<h3 id="toc_29">部分問題</h3>
+
+<h2 id="toc_30">問題3: 補間,値だけを求める</h2>
+
+<h2 id="toc_31">問題4: 多項式補間を多項式の形で求める</h2>
+
+<h1 id="toc_32">6.1. FFT</h1>
+
+<h2 id="toc_33">離散Fourier変換</h2>
+
+<h3 id="toc_34">多項式の変換</h3>
+
+<p>関数$f(s)$を$F&reg;$に離散フーリエ変換するとは,
+$F&reg; = \sum<em>{s=0}^{K-1} f(s) e^{-\frac{2\pi rsi}{K}} = \sum</em>{s=0}^{K-1} f(s) (\omega^{r})^s$
+とすること.
+この時逆フーリエ変換があって，
+$f(s) = \frac{1}{K} \sum<em>{r=0}^{K-1} F&reg; e^{\frac{2\pi rsi}{K}} = \sum</em>{r=0}^{K-1} F&reg; (\omega^{-s})^r$
+となる．
+基底${ e^{-i\frac{2\pi t}{K}} }_{t=0}^{K-1}$に関する展開．</p>
+
+<p>ただし$\omega = e^{-\frac{2\pi i}{K}}$.</p>
+
+<p>これは，数列${a<em>n}</em>{n=0}^{K-1}$から数列${b<em>n}</em>{n=0}^{K-1}$への変換と考えることもできて，
+$b<em>r = \sum</em>{s=0}^{K-1} a<em>s e^{-\frac{2\pi rsi}{K}}$
+$a</em>s = \frac{1}{K} \sum<em>{r=0}^{K-1} b</em>r e^{\frac{2\pi rsi}{K}}$</p>
+
+<p>さらに，上の数列から多項式$p(x) = \sum<em>{i=0}^{K-1} a</em>i x^i, q(t) = \sum<em>{i=0}^{K-1} b</em>i t^i$を作った時，上の変換は$p(x)$から$q(t)$への変換とも考えられる．なぜなら上は，$p,q$に$\omega^s, \omega^r$を代入したものだから．
+$b<em>r = \sum</em>{s=0}^{K-1} a<em>s (\omega^{r})^s = p(\omega^r)$
+同様に
+$a</em>s = \frac{1}{K} q(\omega^s)$</p>
+
+<p>つまり，多項式$p(x)$のフーリエ変換を考えると，変換後の多項式$q(t)$の係数$b_r$は，$p(x)$に$\omega^r$を代入したもの($=p(\omega^r)$)と等しいから，全体では$K$回の代入操作を行うことと等しい．</p>
+
+<p>結局問題は，「べき表現の$K-1$次多項式$p(x)$に対し，全ての$p(\omega^k)$を求めよ．」となる．</p>
+
+<h3 id="toc_35">(連続の)Fourier-transformとの関連</h3>
+
+<p>なぜこれが離散近似になっているかの説明．
+数値計算のツボより．</p>
+
+<h3 id="toc_36">性質</h3>
+
+<p>$\omega = e^{-\frac{2\pi i}{K}}, K=2^k$の性質:
+- $\omega$は1の$K$乗根, $\omega^K = 1$
+- $\omega^{\frac{K}{2}} = -1$
+- $\omega^{K+h} = \omega^h$</p>
+
+<p>基底としての性質(直交規定、正規ではない)
+- $\sum<em>{i=0}^{n-1}(\omega^j)^i(\bar{\omega^k})^i = \sum</em>{i=0}^{n-1}\omega^{i(j-k)} = n(j \equiv k \bmod n), 0(otherwise)$</p>
+
+<h2 id="toc_37">高速Fourier変換 FFT</h2>
+
+<p>$p(x)$について$p(\omega^k), k=0,&hellip;,K-1$を求める
+1. $p(x)$を偶数べきと奇数べきにわける
+    $p(x) = q(x^2) + xs(x^2)$, $q(x),s(x)$は$\frac{K}{2} -1$次多項式．
+2. $q((\omega^k)^2)$と$s((\omega^k)^2)$を再帰的に計算する
+3. くっつける
+    $p(\omega^h) = q(\omega^{2h}) + \omega^h s(\omega^{2h})$
+    $p(\omega^{\frac{K}{2} + h}) = p(-\omega^h) = q(\omega^{2h}) - \omega^h s(\omega^{2h})$</p>
+
+<p>分割統治法．全体で$O(K \log K)$で計算できる.
+Horner法で計算すると$O(K^2)$．早い．</p>
+
+<h2 id="toc_38">逆高速Fourier変換 IFFT</h2>
+
+<p>$p(\omega^h), h=0,&hellip;,K-1$の値が与えられている時，$p(x)$の係数を求める．(多項式補完と同じアイデア)
+1. $p(x)$を偶数べきと奇数べきにわける
+    $p(x) = q(x^2) + xs(x^2)$, $q(x),s(x)$は$\frac{K}{2} -1$次多項式．
+3. 分けた時，
+    $p(\omega^h) = q(\omega^{2h}) + \omega^h s(\omega^{2h})$
+    $p(\omega^{\frac{K}{2} + h}) = p(-\omega^h) = q(\omega^{2h}) - \omega^h s(\omega^{2h})$
+    この左辺が既知なので，連立方程式をといて$q(\omega^{2h}), s(\omega^{2h})$がわかる．再帰的に求めていく．</p>
+
+<h2 id="toc_39">応用例1:多項式の積</h2>
+
+<p>多項式$p(x),q(x)$の積$r(x) = p(x)q(x)$を求める</p>
+
+<ul>
+<li>Kはrの次数より大きなものを選ぶ．</li>
+<li>FFTで$p(\omega^h), q(\omega^h)$を全て求める
+計算量 $O(K\log K)$</li>
+<li>$r(\omega^h) = p(\omega^h)q(\omega^h)$を求める
+計算量 $O(K)$</li>
+<li>IFFTで$r(x)$の係数を求める
+計算量 $O(K\log K)$</li>
+</ul>
+
+<h2 id="toc_40">応用例2:巡回畳み込み</h2>
+
+<p>$C<em>k = \sum</em>{i=0}^k A<em>i B</em>{k-i}$を畳み込みという。</p>
+
+<p>$A\times B = \sum<em>{i=0}^N \sum</em>{j=0}^N A<em>i B</em>j x^{i+j} = \sum<em>{k=0}^{2N} A</em>i B<em>{k-i} x^k = \sum</em>{k=0}^{2N} C_k x^k$</p>
+
+<p>$p(x),q(x)$が$K-1$次.</p>
+
+<p>$\hat{r<em>j} = \sum</em>{l+m=j} p<em>l q</em>m + \sum<em>{l+m=k+j} p</em>l q<em>m = \sum</em>{l=0}^{K+1} p<em>l q</em>{j-q}, (q<em>j = q</em>{k-j})$
+よくわかんない.</p>
+
+<p>参考
+<a href="http://stdkmd.com/fftmul/">http://stdkmd.com/fftmul/</a>
+<a href="https://www.slideshare.net/chokudai/fft-49066791">https://www.slideshare.net/chokudai/fft-49066791</a>
+<a href="http://www.cfme.chiba-u.jp/%7Eyama/DSP/dsp_04.pdf">http://www.cfme.chiba-u.jp/~yama/DSP/dsp_04.pdf</a></p>
+
+<h1 id="toc_41">6.2. 加速</h1>
+
+<p>数列の収束を早くするアルゴリズム．</p>
+
+<p>前提：数列$a<em>n = a + c</em>1 \lambda<em>1^n + c</em>2 \lambda<em>2^n + &hellip;$($1&gt;|\lambda</em>1|&gt;|\lambda_2|&gt;&hellip;$)</p>
+
+<h2 id="toc_42">Richardson加速</h2>
+
+<p>$\lambda<em>1$がわかっていて，$c</em>1$は未知だとする．
+$a<em>n$と$a</em>{n-1}$から$\lambda_1$による主要成分を引く．</p>
+
+<p>$a<em>n&rsquo; = \frac{a</em>n - \lambda<em>1 a</em>{n-1}}{1-\lambda<em>1}$
+は，収束先の$a$は不変で，より早く収束する．もしも$\lambda</em>2$も既知なら，より早く収束する．</p>
+
+<p>$a<em>n = a + c</em>1 \lambda<em>1^n + c</em>2 \lambda<em>2^n + &hellip;$
+$\lambda</em>1 a<em>{n-1} = \lambda</em>1 a + c<em>1 \lambda</em>1^n + c<em>2 \lambda</em>1 \lambda<em>2^{n-1} + &hellip;$
+より
+$a</em>n - \lambda<em>1 a</em>{n-1} = (1-\lambda<em>1)a + (c</em>2\lambda<em>2 - c</em>2\lambda<em>1)\lambda</em>2^{n-1} + &hellip; = (1-\lambda<em>1)a + (1-\lambda</em>1) \frac{1-\frac{\lambda<em>1}{\lambda</em>2}}{1-\lambda<em>1} c</em>2 \lambda<em>2^n$
+より
+$a</em>n&#39; = a + \frac{1-\frac{\lambda<em>1}{\lambda</em>2}}{1-\lambda<em>1}c</em>2 \lambda<em>2^n + &hellip;$
+ここで$\lambda</em>2^n$の係数は定数になっている．</p>
+
+<h2 id="toc_43">Aitken加速</h2>
+
+<p>$\lambda<em>1,c</em>1$両方未知だとする．$\lambda<em>1$を推定することを考える．
+$a</em>n \sim a + c<em>1 \lambda</em>1^n$とすると，$\lambda<em>1 = \frac{a</em>n - a<em>{n-1}}{a</em>{n-1}- a_{n-2}}$</p>
+
+<p>(なぜなら，$b<em>n = a</em>n - a<em>{n-1}$と置くと$b</em>n = (a+c<em>1 \lambda</em>1^n) - (a+c<em>1 \lambda</em>1^{n-1}) = c<em>1(\lambda</em>1 -1)\lambda<em>1^{n-1}$であり，$\frac{b</em>n}{b<em>{n-1}}=\frac{c</em>1 (\lambda<em>1 - 1)\lambda</em>1^{n-1}}{c<em>1(\lambda</em>1 -1)\lambda<em>1^{n-2}} = \lambda</em>1$)</p>
+
+<p>これを使って，上のRichardson加速をする．</p>
+
+<p>$a<em>n&#39; = a</em>n - \frac{(a<em>n - a</em>{n-1})^2}{a<em>n - 2a</em>{n-1} + a_{n-2}}$</p>
+
+<p>$a<em>n&#39; = \frac{a</em>n - \lambda<em>1 a</em>{n-1}}{1-\lambda_1}$</p>
+
+<h2 id="toc_44">$\varepsilon$ extroplation</h2>
+
+<p>連立方程式で$\lambda_i$を求める感じ</p>
+
+<ul>
+<li>数列のタイプで使うべき加速法が違う．なんでも加速できる万能アルゴリズムは存在しないことが示されている．</li>
+</ul>
+
+<h1 id="toc_45">7. 連立一次方程式の解法</h1>
+
+<h2 id="toc_46">問題設定 連立一次方程式</h2>
+
+<p>$n$次連立方程式を解く．</p>
+
+<p>\begin{eqnarray}
+a<em>{11} x</em>1 + a<em>{12} x</em>2 + &hellip; + a<em>{1n} x</em>n = b<em>1\
+a</em>{21} x<em>1 + a</em>{22} x<em>2 + &hellip; + a</em>{2n} x<em>n = b</em>2\
+a<em>{n1} x</em>1 + a<em>{n2} x</em>2 + &hellip; + a<em>{nn} x</em>n = b_n
+\end{eqnarray}</p>
+
+<p>行列で書くと，$A = \begin{pmatrix}
+a<em>{11} &amp; a</em>{12} &amp; &hellip;\
+a<em>{21} &amp; &hellip;\
+&hellip;
+\end{pmatrix}$, $b = \begin{pmatrix} b</em>1 \ b<em>2 \ &hellip; \end{pmatrix}$, $x = \begin{pmatrix} x</em>1 \ x_2 \ &hellip; \end{pmatrix}$ とおくと $Ax = b$.</p>
+
+<h3 id="toc_47">前進代入</h3>
+
+<p>$A$が下三角行列の場合は，$Ax = b$が簡単に解ける．
+$\begin{pmatrix}
+a<em>{11} &amp; 0 &amp; &hellip;\
+a</em>{21} &amp; a<em>{22} &amp; 0 &amp; &hellip;\
+a</em>{31} &amp; a<em>{32} &amp; a</em>{33} &amp; &hellip;\
+&hellip;
+\end{pmatrix} \begin{pmatrix} x<em>1 \ x</em>2 \ x<em>3 \ &hellip; \end{pmatrix} = \begin{pmatrix} b</em>1 \ b<em>2 \ b</em>3 \ &hellip; \end{pmatrix}$</p>
+
+<p>とすると$1$行目は$x<em>1 = \frac{b</em>1}{a<em>{11}}$, $i$行目は$x</em>i = a<em>{ii}^{-1} ( b</em>i - \sum<em>{j=1}^{i-1} a</em>{ij} x_j )$．</p>
+
+<h3 id="toc_48">LU分解</h3>
+
+<p>下三角と上三角の積に分解する．</p>
+
+<p>$Ax=b$に対して，
+1. まず$LU = A$となる下三角行列$L$，上三角行列$U$を求める．($o(n^3)$)
+2. $Ly = b$を解く(前進代入)．次に$Ux=y$を解いて$x$を求める．($o(n^2)$) ($o(n^2)$)
+    ($Ax=b$を$LUx=b$とする．$Ux=y$と置くと，$Ly=b$．</p>
+
+<p>係数が同じなら，2回目以降は$o(n^2)$でできる．</p>
+
+<h4 id="toc_49">逆行列を求める</h4>
+
+<p>$B = A^{-1}$とすると$AB = I$だから，$A b^{(i)} = e^{(i)}$を$n$回計算して$b^{(i)}$を求めることで，$A^{-1}$が求められる．</p>
+
+<h4 id="toc_50">分解手順</h4>
+
+<p>$n\times n$の行列を$(1,n-1) \times (1,n-1)$に分解．</p>
+
+<p>$A = \begin{pmatrix}
+a<em>1 &amp; a</em>{12}^\top \
+a<em>{21} &amp; A</em>{22} 
+\end{pmatrix} = \begin{pmatrix}
+l<em>{11} &amp; 0 \
+l</em>{21} &amp; L<em>{22}
+\end{pmatrix} \begin{pmatrix}
+u</em>{11} &amp; u<em>{12}^\top \
+0 &amp; U</em>{22}
+\end{pmatrix} = \begin{pmatrix}
+l<em>{11} u</em>{11} &amp; l<em>{11} u</em>{12}^\top \
+u<em>{11} l</em>{21} &amp; l<em>{21} u</em>{12}^\top + L<em>{22}U</em>{22}
+\end{pmatrix}$</p>
+
+<p>$l<em>{11} = 1$とすると，$u</em>{11} = a<em>{11}$, $u</em>{12}^\top = a<em>{12}^\top$．この結果を使って$l</em>{21} = a<em>{21} / u</em>{11}$, $L<em>{22} U</em>{22} = A<em>{22} - l</em>{21} u_{12}^\top$. これを再帰的に計算していく．</p>
+
+<ul>
+<li>メモリ配置
+分解後の結果を上書きして保存するとメモリ効率がいい．$l<em>{ii} = 1$なので，保存しておく必要なし．
+$\begin{pmatrix}
+a</em>{11} &amp; a<em>{12} &amp; a</em>{13} &amp; a<em>{14} \
+a</em>{21} &amp; a<em>{22} &amp; a</em>{23} &amp; a<em>{24} \
+a</em>{31} &amp; a<em>{32} &amp; a</em>{33} &amp; a<em>{34} \
+a</em>{41} &amp; a<em>{42} &amp; a</em>{43} &amp; a<em>{44} \
+\end{pmatrix} \mapsto \begin{pmatrix}
+u</em>{11} &amp; u<em>{12} &amp; u</em>{13} &amp; u<em>{14} \
+l</em>{21} &amp; u<em>{22} &amp; u</em>{23} &amp; u<em>{24} \
+l</em>{31} &amp; l<em>{32} &amp; u</em>{33} &amp; u<em>{34} \
+l</em>{41} &amp; l<em>{42} &amp; l</em>{43} &amp; u_{44} \
+\end{pmatrix}$</li>
+<li>枢軸選択
+$u<em>{11}, a</em>{11}$が$0$に近いと，$a<em>{21} / u</em>{11}$ができない．0でないところと行を交換しておく．(連立方程式は行の交換に関しては不変なので)</li>
+</ul>
+
+<h3 id="toc_51">LDU分解</h3>
+
+<p>対称行列をLDU分解すると，$L=U^\top$となる．(LDUT分解) LU分解の半分の計算量とメモリ
+さらにDが正だと，$LD^{&frac12;} = L&#39;$とすれば$A=L&#39; L&#39;^\top$．(Cholesky分解)</p>
+
+<h3 id="toc_52">QR分解</h3>
+
+<p>直交行列と上三角の積に分割する．
+(ゼミの内容)</p>
+
+<p>$A = QR$, $Q$:直交行列($Q Q^\top = I$, 基底ベクトルが正規直交), $R$:上三角行列</p>
+
+<h2 id="toc_53">問題設定 固有値</h2>
+
+<p>行列$A$の絶対値最大の固有値とそれに対応する固有ベクトルを求めよ．</p>
+
+<h3 id="toc_54">ベキ乗法</h3>
+
+<p>行列$A$の絶対値最大の固有値$\lambda$が単純な時(重解がない時),適当な初期ベクトル$x<em>0$から，$y</em>k = A x<em>{k-1}, x</em>k = \frac{y<em>k}{|| y</em>k ||}$(正規化)を繰り返すと，$x_k \to x(\lambda)$(固有ベクトル)．</p>
+
+<p>証明
+$A$が$n$個の一次独立な固有ベクトル$u<em>i$を持つと仮定すると，初期ベクトル$x</em>0$は$x<em>0 = \sum</em>{i=1}^n c<em>i u</em>i$と表せる．
+$A^k x<em>0 = A^k \sum</em>{i=1}^n c<em>i u</em>i = \sum<em>{i=1}^n c</em>i \lambda<em>i^k u</em>i$, $A u<em>i = \lambda</em>i u<em>i$,$A^k u</em>i = A^{k-1} \lambda<em>i u</em>i = &hellip; = \lambda<em>i^k u</em>i$で，固有値$\lambda<em>i$と固有ベクトル$u</em>i$が対応．ソートされているとすると，$A^k x<em>0 = \lambda</em>1^k ( c<em>1 u</em>1 + \sum<em>{i=2}^n c</em>i (\frac{\lambda<em>i}{\lambda</em>1})^k u<em>i \to \tau u</em>1$</p>
+
+<p>これで固有ベクトル$u<em>1$を求めたら，$\lambda</em>1 = \frac{u<em>1 A u</em>1}{||u_1||^2}$ (なぜなら$Ax = \lambda x, x^\top A x = x^\top \lambda x, \lambda = \frac{x^\top A x}{x^\top x}$) とすると固有値がもとまる．</p>
+
+<h3 id="toc_55">逆反復法, Raylergh商反復法</h3>
+
+<p>最大固有値ではなく，$\sigma$に最も近い固有値を求める．</p>
+
+<p>$(A-\sigma I)^{-1}$の固有値が$\frac{1}{\lambda - \sigma}$になる．($\sigma$に一番近い固有値が最大になる)
+$(A-\sigma I)^{-1}$に上のべき乗法を使うと，$\sigma$に一番近い固有値が求められる．</p>
+
+<p>各ステップで，$\sigma =$得られた近似固有値とすると，より早く収束する．
+$y<em>k = (A- \sigma</em>{k-1} I)^{-1} x<em>{k-1}, x</em>k = \frac{y<em>k}{||y</em>k||}, \sigma<em>k = \frac{y</em>k^\top A y<em>k}{y</em>k^\top y_k}$</p>
+
+<h1 id="toc_56">8.</h1>
+
+<p>$Ax = b$の真の解$x$，近似解$\tilde{x}$
+- 誤差 $e = \tilde{x} - x$
+- 残差 $r = A \tilde{x} - b$
+誤差の最小化と，残差の最小化は意味が違う</p>
+
+<h2 id="toc_57">ベクトル空間のノルム公理</h2>
+
+<h3 id="toc_58">ノルム</h3>
+
+<ul>
+<li>$||u|| \geq 0$</li>
+<li>$||\alpha u || = |\alpha| ||u||$</li>
+<li>$||u+v|| \leq ||u|| + ||v||$ (三角不等式)</li>
+</ul>
+
+<h3 id="toc_59">距離</h3>
+
+<ul>
+<li>$d(u,v)\geq 0$, $d(v,u)=0 \leftrightarrow v=u$</li>
+<li>$d(u,v) = d(v,u)$</li>
+<li>$d(u,v) \leq d(u,w) + d(w,v)$</li>
+</ul>
+
+<p>ノルム$|| . ||$に対して， $d(u,v) = ||u-v||$は距離</p>
+
+<h3 id="toc_60">ベクトルのノルムの各種</h3>
+
+<h4 id="toc_61">2ノルム Euclidノルム</h4>
+
+<p>$||x||<em>2 = \sqrt{\sum</em>{i=1}^n |x_i|^2}$</p>
+
+<h4 id="toc_62">1ノルム</h4>
+
+<p>$||x||<em>1 = \sum</em>{i=1}^n |x_i|$</p>
+
+<h4 id="toc_63">$\infty$ノルム 最大値ノルム</h4>
+
+<p>$||x||<em>\infty = \max</em>i |x_i|$</p>
+
+<p>注：定数倍の違いしかない．
+$||u||<em>\infty \leq ||u||</em>2 \leq ||u||<em>1$
+$||u||</em>1 \leq \sqrt{2} ||u||<em>2 \leq 2 || u||</em>\infty$
+(n=2の場合)</p>
+
+<p>図：n=2の時の，$||x||<em>1 = 1, ||x||</em>2=1, ||x||_\infty=1$を図示したもの</p>
+
+<h3 id="toc_64">行列のノルムの各種</h3>
+
+<h4 id="toc_65">Frobeniusノルム</h4>
+
+<p>$||A||<em>F = \sqrt{\sum</em>{i=1}^n \sum<em>{j=1}^n |a</em>{ij}|^2}$</p>
+
+<p>これは一貫性(consistency)を満たす．(ベクトルをかけてベクトルになった時の2ノルムと対応)
+$||Ax||<em>2 \leq ||A||</em>F ||x||<em>2$
+$||AB||</em>F \leq ||A||<em>F ||B||</em>F$</p>
+
+<p>注: $||I||_F = \sqrt{n}$</p>
+
+<h4 id="toc_66">作用素ノルム</h4>
+
+<p>ベクトルのノルム$||.||<em>p$を選ぶ
+$||A||</em>p = \sup<em>{x\neq 0} \frac{||Ax||</em>p}{||x||<em>p} = \sup</em>{||x||=1} ||Ax||_p$</p>
+
+<p>その行列がベクトルを何倍にするか</p>
+
+<ul>
+<li>一貫性をもつ
+$||Ax||<em>p \leq ||A||</em>p ||x||<em>p$
+$||AB||</em>p \leq ||A||<em>p ||B||</em>p$</li>
+<li>$||I||_p = 1$</li>
+<li>直行行列$Q$に対して，$||Q||_2 = 1$</li>
+</ul>
+
+<h4 id="toc_67">1ノルム(列和ノルム)</h4>
+
+<p>列の和の最大値
+$||A||<em>1 = \max</em>j \sum<em>{i=1}^n |a</em>{ij}|$</p>
+
+<h4 id="toc_68">無限大ノルム(行和ノルム)</h4>
+
+<p>行の和の最大値
+n行一列のベクトル(縦ベクトル)の時に，ベクトルの無限大ノルムと一致
+$||A||<em>\infty = \max</em>i \sum<em>{j=1}^n |a</em>{ij}|$</p>
+
+<h4 id="toc_69">2ノルム(スペクトルノルム)</h4>
+
+<p>$||A||<em>2 = \sqrt{\max</em>{\lambda \in \lambda(B)} \lambda A^\top A}$
+$\lambda(B)$は$B$の固有値の集合</p>
+
+<h3 id="toc_70">連立方程式の誤差の解析</h3>
+
+<p>以下，一貫性不等式を満たすベクトルと行列のノルムを選ぶ．
+その条件のもとでどのノルムを選ぶかは関係ない．</p>
+
+<p>$Ax=b$に対して</p>
+
+<h4 id="toc_71">係数の誤差</h4>
+
+<p>係数に誤差が入った方程式$\tilde{A}\tilde{x} = b$</p>
+
+<p>誤差
+$\tilde{x}-x = \tilde{A}^{-1}b - A^{-1}b = (\tilde{A}^{-1}-A^{-1})b = A^{-1}(A-\tilde{A})\tilde{A}^{-1}b$</p>
+
+<p>その相対誤差っぽいもの
+$\frac{||\tilde{x} - x||}{||\tilde{x}||} = \frac{A^{-1}(A-\tilde{A})\tilde{A}^{-1}b}{||\tilde{x}||} \leq \frac{||A^{-1}|| ||A-\tilde{A}|| ||\tilde{A}^{-1} b||}{||\tilde{x}||} = ||A||||A^{-1}|| \frac{||A-\tilde{A}||}{||A||}$</p>
+
+<p>条件数$\kappa(A) = ||A|| ||A^{-1}|| \geq ||I|| \geq 1$
+$A$の相対誤差$\frac{||A-\tilde{A}||}{||A||}$と置くと</p>
+
+<p>$\frac{||\tilde{x}-x||}{\tilde{x}} \leq \kappa (A) \frac{||\tilde{A}-A||}{||A||}$</p>
+
+<p>⭐️ 相対誤差は，係数行列の相対誤差の条件数倍で抑えられる
+$\kappa(A)\geq 10^{16}$は倍精度では解けない．</p>
+
+<h4 id="toc_72">右辺の誤差</h4>
+
+<p>右辺が少しずれた方程式$A\tilde{x} = \tilde{b}$</p>
+
+<p>$\frac{||\tilde{x}-x||}{||x||} = \frac{||A^{-1}\tilde{b} - A^{-1}b||}{||x||} = \frac{||A^{-1}(\tilde{b} - b)||}{||x||} \leq \frac{||A^{-1}|| ||\tilde{b}-b||}{||x||} = \frac{||A^{-1}|| ||b||}{||x||} \frac{||\tilde{b}-b||}{||b||}$</p>
+
+<p>$\eta = \frac{||A^{-1}|| ||b||}{||x||}$と置くと
+$||x|| = ||A^{-1}b|| \leq ||A^{-1}||||b||$ より $1\leq \eta \leq \kappa(A)$</p>
+
+<p>$||A^{-1}|| ||b|| = ||A^{-1}|| ||Ax|| \leq ||A^{-1}|| ||A|| ||x||$</p>
+
+<p>$\frac{||A^{-1}|| ||b||}{||x||} \leq \frac{||A^{-1}|| ||A|| ||x||}{||x||} = \kappa(A)$</p>
+
+<h3 id="toc_73">相対誤差と相対残差</h3>
+
+<p>$e = \tilde{x} - x$, $r = A\tilde{x} -b$, ($r=Ae$)
+相対誤差$\frac{||e||}{||x||}$, 相対残差$\frac{||r||}{||b||}$</p>
+
+<p>$\frac{||e||}{||x||} = \frac{||A^{-1}r||}{||x||} \leq  \frac{||A^{-1}|| ||r||}{||x||} = \frac{||A^{-1}|| ||b||}{||x||} \frac{||r||}{||b||}$
+条件数が大きいと，解がきちんと求まらない</p>
+
+<h3 id="toc_74">反復改良</h3>
+
+<p>LU分解にも丸め誤差が入る．$A \simeq LU = \tilde{A}$
+それを使って前進後退代入で求めているものは$\tilde{x} = \tilde{A^{-1}} b$(係数に誤差が入ったバージョン)</p>
+
+<p>$x = \tilde{x} - A^{-1} (A \tilde{x} - b)$の$A^{-1}$を$\tilde{A}^{-1}$に置き換える．</p>
+
+<p>反復改良
+以下を1,2回繰り返す
+$x^{(k+1)} = x^{(k)} - \tilde{A}^{-1}(A x^{(k)} - b)$</p>
+
+<p>どのくらい精度が上がるか
+$A x^{(k)} - b = A (x^{(k)} - x)$
+$x^{(k+1)} - x = x^{(k)} - x - \tilde{A}^{-1} (A x^{(k)} - b) = (I-\tilde{A}^{-1} A) (x^{(k)} - x) = (I- \tilde{A}^{-1} A)^k (x^{(1)} - x)$</p>
+
+<p>$I-\tilde{A}^{-1} A$の固有値の絶対値が最大のものが1未満なら収束．</p>
+
+<ul>
+<li>$\tilde{A}^{-1}$にLU分解を使えば，1,2回で十分</li>
+<li>$\tilde{A}^{-1}$は相当荒い近似でも可</li>
+<li>収束後は残渣は丸め誤差くらいまで減る</li>
+</ul>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
