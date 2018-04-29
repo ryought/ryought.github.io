@@ -1,13 +1,12 @@
 ---
 layout: splash
-title: "Home" 
-author_profile: true
+title: "Ryought::Lab Home" 
 permalink: /
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/splash.png
-excerpt: "aaaaa"
+excerpt: "ryought"
 intro:
   - excerpt: "welcome" 
 ---

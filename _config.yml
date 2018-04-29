@@ -44,8 +44,17 @@ comments:
 # 検索機能
 search: true
 
+# GA
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "UA-118388145-1"
+
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  footnote_nr: 1
 
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "neon"
@@ -72,6 +81,7 @@ defaults:
       comments: true
       share: true
       related: true
+      math: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -89,4 +99,5 @@ exclude:
   - vendor/ruby/
   - old/  # old ryought::lab website sources
   - README.md
+  - Makefile
 encoding: "utf-8"
