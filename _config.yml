@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: ryought::lab
+title: Ryought::Lab
 title_separator: "|"
 email: ryonakabayashi@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  An amazing website
+  Ryo Nakabayashi(ryought) portal. software and bioinfomatics blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ryought.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 breadcrumbs: true
