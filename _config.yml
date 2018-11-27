@@ -17,9 +17,9 @@ title: Ryought::Lab
 title_separator: "|"
 email: ryonakabayashi@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Ryo Nakabayashi(ryought) portal. software and bioinfomatics blog
+  Ryo Nakabayashi(ryought) Bioinfomatics and Web Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ryought.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ryought.app" # the base hostname & protocol for your site, e.g. http://example.com
 breadcrumbs: true
 twitter_username: ryought
 github_username:  ryought
@@ -29,7 +29,7 @@ twitter:
 author:
   name: "Ryo Nakabayashi"
   avatar: "assets/ryought.jpg"
-  bio: "UTokyo Bioinfo B4"
+  bio: "UTokyo BioInfo B4"
   location: "Tokyo, Japan"
   email: "nakabayashi@gmail.com"
   github: "ryought"
@@ -56,7 +56,7 @@ kramdown:
   input: GFM
   footnote_nr: 1
 
-remote_theme: "mmistakes/minimal-mistakes"
+remote_theme: "mmistakes/minimal-mistakes@4.14.0"
 minimal_mistakes_skin: "neon"
 plugins:
   - jekyll-paginate
@@ -64,11 +64,11 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-include-cache
 
 permalink: /logs/:title/
 paginate: 5
 paginate_path: /logs/page:num
-
 
 defaults:
   # _postsの投稿全てに適用される
