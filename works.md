@@ -14,13 +14,15 @@ toc_icon: "cog"
 Bachelor, [Department of Bioinfomatics and Systems Biology, Faculty of Science, The University of Tokyo](http://www.bs.s.u-tokyo.ac.jp/bioinfo/)
 
 - Collective motion analysis of Dictyostelium discoideum
+
+    「粘菌細胞集団の自己組織的回転運動の解析」@ Qbio 8th, 2016
 - C.elegans cell 3D segmentation & recognition with deep-learning method(3D-UNnet)
 - Genome Assembly
 
 ## Web
 js(nodejs), typescript, vue.js, AWS
 
-- Work at [Beatrobo, Inc.](https://beatrobo.com/)
+- Internship [Beatrobo, Inc.](https://beatrobo.com/)
 
 - ICF official website management
 
@@ -63,13 +65,13 @@ js(nodejs), typescript, vue.js, AWS
 
 
 ## Robotics, Hardwares
-- QRDrone
+- QRDrone(2013)
 
-    Quadcopter, drone powered by mbed
+    Quadcopter(drone) powered by mbed. Built from scratch
 
-- [OUXT Polaris](http://robotx.osaka/)
+- [OUXT Polaris](http://robotx.osaka/) @ Maritime RobotX Challenge 2018
 
-    Team Member(software, image processing) @ Maritime RobotX Challenge 2018
+    Team Member(software, image processing)
 
     Object Detection with ResNet, Jetson TX2, TensorRT on ROS
 

@@ -4,4 +4,6 @@ title: About
 author_profile: true
 permalink: /aboutme/
 ---
-BioInfomatics
+
+- BioInfomatics
+- Web

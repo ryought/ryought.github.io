@@ -6,10 +6,12 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/splash.png
-excerpt: "ryought"
+excerpt: "ryought - Ryo Nakabayashi"
 intro:
   - excerpt: "welcome" 
 ---
 
-Personal Website
-Now under constructing
+# welcome to ryought::lab
+
+for detail, see [works](/works)
+
