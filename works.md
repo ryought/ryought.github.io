@@ -17,10 +17,10 @@ Bachelor, [Department of Bioinfomatics and Systems Biology, Faculty of Science, 
 
     「粘菌細胞集団の自己組織的回転運動の解析」@ Qbio 8th, 2016
 - C.elegans cell 3D segmentation & recognition with deep-learning method(3D-UNnet)
-- Genome Assembly
+- Genome assembly with Hi-C and probabilistic models
 
 ## Web
-js(nodejs), typescript, vue.js, AWS
+frontend/serverside js(node.js, typescript, vue, ReactNative), AWS
 
 - Internship [Beatrobo, Inc.](https://beatrobo.com/)
 
@@ -48,7 +48,6 @@ js(nodejs), typescript, vue.js, AWS
 
     Repository: [RickyOta/CSML](https://github.com/RickyOta/CSML)
 
-
 ## Tiny Tools
 - [ryought/scatter-sampler](https://github.com/ryought/scatter-sampler)
 
@@ -65,17 +64,21 @@ js(nodejs), typescript, vue.js, AWS
 
 
 ## Robotics, Hardwares
-- QRDrone(2013)
-
-    Quadcopter(drone) powered by mbed. Built from scratch
-
 - [OUXT Polaris](http://robotx.osaka/) @ Maritime RobotX Challenge 2018
 
     Team Member(software, image processing)
 
-    Object Detection with ResNet, Jetson TX2, TensorRT on ROS
+    - Object recognition node with ResNet with TensorRT(Nvidia) on ROS, Jetson TX2
+    - On-board, LTE network configuration
+    - Fast crosscompile pipeline for Jetson using AWS EC2 a1.4xlarge instances
 
+In high-school:
 
+- QRDrone(2013)
+
+    Quadcopter(drone) powered by mbed. Its software is built from scratch.
+
+    [About](https://os.mbed.com/users/ryought/notebook/qrdrone/), [Bulid log](https://os.mbed.com/users/ryought/notebook/qrdronembed_quadcopter-building-log/)
 - 4bit CPU
 
 ## Irish Traditional Music
