@@ -1,16 +1,10 @@
----
-layout: single
-title: About Me
-author_profile: true
-permalink: /aboutme/
----
-
+## Affiliation
 - Education
     - [Department of Bioinformatics and Systems Biology, Faculty of Science, The University of Tokyo](http://www.bs.s.u-tokyo.ac.jp/bioinfo/) 2015/04 - 2019/03
     - [Graduate School of Frontier Sciences, The University of Tokyo](https://www.k.u-tokyo.ac.jp/) 2019/04 -
 - Research
     - [Morishita Lab](https://mlab.cb.k.u-tokyo.ac.jp/) (bachelor / master) 2018/05 -
-- Software Developper
+- Software Developer
     - [Beatrobo, Inc.](https://beatrobo.com/) (parttime) 2016/04 - 2019/04
     - [HAPT Lab, LLC](https://haptlab.com/) (parttime) 2019/04 -
     - [Tier IV, Inc.](https://tier4.jp/) (parttime) 2019/05 - 
@@ -19,3 +13,35 @@ permalink: /aboutme/
 - Melodeon Player
     - Féile Tokyo 2019 Melodeon(Senior), Duets(Senior)
     - Intercollegeate Celtic Festival (web)
+
+## Skills
+- Web
+    - Frontend: HTML+CSS, TypeScript, frontend frameworks (vue.js, react), client side computing (WebGL, audio and video on browser), SPA
+    - Backend: node.js, AWS/GCP/Lambda/EC2, docker/k8s
+    - Scraping, Alexa Skills, Chrome extension, Tensorflow.js, Electron
+- Mobile Apps
+    - React Native
+    - Android(Java), iOS(Swift)
+- Analysis
+    - data analysis / image processing with Python
+    - Tensorflow, Keras, 3D segmentation
+- Bioinformatics
+    - Scaffolding with Hi-C
+    - Assembly graph analysis
+    - Image Segmentation
+- Hardware/Robotics
+    - Arduino/mbed, Rapid Prototyping
+    - Robot software, ROS
+    - Object Recognition
+    - CI/CD
+    - security, wireless networking
+- 3DCG/CAD
+    - blender
+    - Autodesk Inventor, Fusion360, 3DS MAX
+- Environment
+    - vim
+    - mac, ubuntu
+- Personal Interest
+    - Program Calculation, Haskell
+    - Information Geometry
+    - User Interface

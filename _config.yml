@@ -1,18 +1,3 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Ryought::Lab
 title_separator: "|"
 email: ryonakabayashi@gmail.com
@@ -20,11 +5,6 @@ description: >- # this means to ignore newlines until "baseurl:"
   Ryo Nakabayashi(ryought) Bioinfomatics and Web Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ryought.app" # the base hostname & protocol for your site, e.g. http://example.com
-breadcrumbs: true
-twitter_username: ryought
-github_username:  ryought
-twitter:
-  username: ryought
 
 author:
   name: "Ryo Nakabayashi"
@@ -41,46 +21,36 @@ comments:
   disqus:
     shortname: "ryought-lab"
 
-# 検索機能
-search: true
-
-# GA
 analytics:
   provider: "google-gtag"
   google:
     tracking_id: "UA-118388145-1"
 
-# Build settings
 markdown: kramdown
 kramdown:
   input: GFM
+  syntax_highlighter: rouge
   footnote_nr: 1
 
-remote_theme: "mmistakes/minimal-mistakes@4.14.0"
-minimal_mistakes_skin: "neon"
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
   - jemoji
-  - jekyll-include-cache
 
-permalink: /logs/:title/
-paginate: 5
-paginate_path: /logs/page:num
+# permalink: /logs/:title/
+# paginate: 5
+# paginate_path: /logs/page:num
 
-defaults:
-  # _postsの投稿全てに適用される
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      comments: true
-      share: true
-      related: true
-      math: false
+# defaults:
+#   # _postsの投稿全てに適用される
+#   - scope:
+#       path: ""
+#       type: posts
+#     values:
+#       layout: single
+#       comments: true
+#       share: true
+#       related: true
+#       math: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

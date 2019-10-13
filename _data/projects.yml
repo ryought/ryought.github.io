@@ -1,0 +1,107 @@
+- title: "Joined RobotX Maritime Challenge as OUXT Polaris"
+  description: 自動航行ボートを作る大会 Maritime RobotX Challenge 2018 に大阪大学を中心とするチームのメンバーとして出場しました。ResNetをJetson TX2上のTensorRTで動作させることによる物体認識、AWS EC2を使った船体制御プログラムの自動クロスコンパイル/デプロイパイプラインの構築、船体ネットワークの最適化に取り組みました。
+  image: /assets/robotics.png
+  links:
+    - title: OUXT Polaris Official Page
+      url: http://robotx.osaka/
+
+- title: 'Goppie in the Woods: Crowdfunding for Fleadh 2019'
+  description: |
+    アイルランド伝統音楽の祭典フラーキヨールに日本代表として参加しました。渡航費支援のために、特別音源・ドキュメンタリー動画・ライブ招待券などを販売しました。7万円強のご支援をいただき、現地のTV取材等を受けました。
+  image: /assets/music.png
+  links:
+    - title: Special Page
+      url: https://ryought.app/shop
+    - title: SoundCloud
+      url: fuga
+
+- title: 'mummer-idotplot'
+  description: 配列解析に欠かせないドットプロットをインタラクティブに表示するツールを作りました。
+  image: /assets/drone.png
+  links:
+    - title: Build Log
+      url: https://os.mbed.com/users/ryought/notebook/qrdronembed_quadcopter-building-log/
+    - title: mbed Repository
+      url: https://os.mbed.com/users/ryought/notebook/qrdrone/
+
+- title: 'github-md-math-renderer'
+  description: GitHub上にあるmarkdown形式のファイルをMathJaxによる数式表示付きでプレビューするhtmlです。
+  image: /assets/drone.png
+  links:
+    - title: Build Log
+      url: https://os.mbed.com/users/ryought/notebook/qrdronembed_quadcopter-building-log/
+    - title: mbed Repository
+      url: https://os.mbed.com/users/ryought/notebook/qrdrone/
+
+- title: 'papier'
+  description: cliベースで管理するミニマルな文献管理ツールです。
+  image: /assets/drone.png
+  links:
+    - title: Build Log
+      url: https://os.mbed.com/users/ryought/notebook/qrdronembed_quadcopter-building-log/
+    - title: mbed Repository
+      url: https://os.mbed.com/users/ryought/notebook/qrdrone/
+
+- title: 'webdion'
+  description: キーボードで遊べるアコーディオンです。
+  image: /assets/drone.png
+  links:
+    - title: Build Log
+      url: https://os.mbed.com/users/ryought/notebook/qrdronembed_quadcopter-building-log/
+    - title: mbed Repository
+      url: https://os.mbed.com/users/ryought/notebook/qrdrone/
+
+- title: '粘菌細胞集団の自己組織的回転運動の解析'
+  description: Qbio 8th, 2016 にてポスター発表を行いました。
+  image: /assets/dicty.png
+  links:
+
+- title: 'HiC-Hiker: A probabilistic model to determine contig orientation in chromosome-length scaffolds with Hi-C'
+  description: Hi-C法を使った低価格簡便な染色体長ゲノムアセンブリ手法を確率モデルを使って改善する研究です。学部の卒業研究を論文として発表しました。
+  image: /assets/hichiker.png
+  links:
+    - title: Article
+      url:
+    - title: GitHub
+      url:
+
+- title: 'Tutor at hackathon'
+  description: Androidアプリを作る初心者向けハッカソンにチューターとして参加しました。担当したチームがGoogle賞をいただきました。
+  links:
+    - title: Article
+      url: https://ryought.app/shop
+    - title: GitHub
+      url: fuga
+
+- title: 'Intercollegiate Celtic Festival Web'
+  description: 国内のケルト音楽サークルの合宿イベントICFのwebサイトをアップデートしました。
+  image: /assets/icf.png
+  links:
+    - title: ICF Official
+      url: https://ryought.app/shop
+
+- title: 'QRDrone'
+  description: ドローン(quadcopter)のファームウェア・実機を自作しました。2013年に高校の文化祭での展示物として作成しました。
+  image: /assets/drone.png
+  links:
+    - title: Build Log
+      url: https://os.mbed.com/users/ryought/notebook/qrdronembed_quadcopter-building-log/
+    - title: mbed Repository
+      url: https://os.mbed.com/users/ryought/notebook/qrdrone/
+
+- title: 'RickyOta/CSML'
+  description: Automatic cell segmentation of microscopic images using machine-learning methods(FCN). Distributed as software built with Electron. RickyOtaによる細胞セグメンテーションアルゴリズムのフロントエンドをElectronで作成しました。
+  image: /assets/csml.png
+  links:
+    - title: Download(mac, win)
+      url: https://github.com/RickyOta/CSML/releases
+    - title: GitHub
+      url: https://github.com/RickyOta/CSML
+
+- title: 'Handmade 4bit CPU'
+  description: 4bit CPUを自作しました。
+  image: /assets/cpu.jpg
+
+- title: 'ルービックキューブソルバー'
+  description: ルービックキューブを自動で解くロボットのハードウェア部分を担当しました。
+  image: /assets/cube.jpg

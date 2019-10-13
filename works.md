@@ -1,12 +1,9 @@
 ---
-layout: single
+layout: post
 title: Works
-author_profile: true
 permalink: /works/
-toc: true
-toc_label: "My Table of Contents"
-toc_icon: "cog"
 ---
+
 
 ## Bioinfomatics
 [Morishita Laboratory](http://mlab.cb.k.u-tokyo.ac.jp/)
@@ -39,15 +36,6 @@ frontend/serverside js(node.js, typescript, vue, ReactNative), AWS
     traditional melodeon/button accordion on your browser [demo](https://ryought.app/webdion/)
 
 
-## Deep Learning Application, Electron cross platform apps
-- RickyOta/CSML
-
-    Automatic cell segmentation of microscopic images using machine-learning methods(FCN). Distributed as software built with Electron.
-
-    Download(mac, win): [RickyOta/CSML release](https://github.com/RickyOta/CSML/releases)
-
-    Repository: [RickyOta/CSML](https://github.com/RickyOta/CSML)
-
 ## Tiny Tools
 - [ryought/scatter-sampler](https://github.com/ryought/scatter-sampler)
 
@@ -63,23 +51,3 @@ frontend/serverside js(node.js, typescript, vue, ReactNative), AWS
     デスクトップ背景にできるLaTeXのチートシート
 
 
-## Robotics, Hardwares
-- [OUXT Polaris](http://robotx.osaka/) @ Maritime RobotX Challenge 2018
-
-    Team Member(software, image processing)
-
-    - Object recognition node with ResNet with TensorRT(Nvidia) on ROS, Jetson TX2
-    - On-board, LTE network configuration
-    - Fast crosscompile pipeline for Jetson using AWS EC2 a1.4xlarge instances
-
-In high-school:
-
-- QRDrone(2013)
-
-    Quadcopter(drone) powered by mbed. Its software is built from scratch.
-
-    [About](https://os.mbed.com/users/ryought/notebook/qrdrone/), [Bulid log](https://os.mbed.com/users/ryought/notebook/qrdronembed_quadcopter-building-log/)
-- 4bit CPU
-
-## Irish Traditional Music
-- Button Accordion, Melodeon

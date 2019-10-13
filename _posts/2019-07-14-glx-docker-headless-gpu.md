@@ -3,6 +3,7 @@ title:  "OpenGL/GLXを使うXアプリケーションをkubernetes/dockerコン�
 date:   2019-07-14 12:00:00 +0900
 categories: Docker GLX Unity
 math: false
+image: /assets/lgsvl_on_docker.png
 ---
 
 OpenGLやGLXなどを使ってグラフィック用途でGPUを使うアプリケーションを、画面のないheadlessサーバー上で、しかもDocker内で動かす方法のまとめ。
@@ -36,7 +37,7 @@ GPUインスタンス上で、GPUのドライバとnvidia-docker2をインスト
 
 それ以外は標準のままのインスタンス。us-west1-bに立ち上げた。起動時にwarningが出るが気にしない。ブラウザ上で設定したが、同様のコマンドは以下。
 
-```
+```sh
 gcloud compute --project=$PROJECT_NAME create $INSTANCE_NAME \
   --zone=us-west1-b \
   --machine-type=n1-highmem-2 \
