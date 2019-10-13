@@ -17,7 +17,6 @@
 
 - title: 'mummer-idotplot'
   description: 配列解析に欠かせないドットプロットをインタラクティブに表示するツールを作りました。
-  image: /assets/drone.png
   links:
     - title: Build Log
       url: https://os.mbed.com/users/ryought/notebook/qrdronembed_quadcopter-building-log/
@@ -26,7 +25,6 @@
 
 - title: 'github-md-math-renderer'
   description: GitHub上にあるmarkdown形式のファイルをMathJaxによる数式表示付きでプレビューするhtmlです。
-  image: /assets/drone.png
   links:
     - title: Build Log
       url: https://os.mbed.com/users/ryought/notebook/qrdronembed_quadcopter-building-log/
@@ -35,21 +33,26 @@
 
 - title: 'papier'
   description: cliベースで管理するミニマルな文献管理ツールです。
-  image: /assets/drone.png
-  links:
-    - title: Build Log
-      url: https://os.mbed.com/users/ryought/notebook/qrdronembed_quadcopter-building-log/
-    - title: mbed Repository
-      url: https://os.mbed.com/users/ryought/notebook/qrdrone/
 
 - title: 'webdion'
-  description: キーボードで遊べるアコーディオンです。
-  image: /assets/drone.png
+  description: キーボードで遊べるアコーディオンです。traditional melodeon/button accordion on your browser
   links:
-    - title: Build Log
-      url: https://os.mbed.com/users/ryought/notebook/qrdronembed_quadcopter-building-log/
-    - title: mbed Repository
-      url: https://os.mbed.com/users/ryought/notebook/qrdrone/
+    - title: Demo
+      url: https://ryought.app/webdion/
+
+- title: 'scatter-sampler'
+  description: 2次元分布のテストデータを生成してcsvでダウンロードするwebページ
+  links:
+    - title: Demo
+      url: https://ryought.app/scatter-sampler/web/index.html
+    - title: GitHub
+      url: https://github.com/ryought/scatter-sampler
+
+- title: 'latex-cheat-sheet'
+  description: デスクトップ背景にできるLaTeXのチートシート
+  links:
+    - title: GitHub
+      url: https://github.com/ryought/latex-cheat-sheet
 
 - title: '粘菌細胞集団の自己組織的回転運動の解析'
   description: Qbio 8th, 2016 にてポスター発表を行いました。
@@ -67,18 +70,13 @@
 
 - title: 'Tutor at hackathon'
   description: Androidアプリを作る初心者向けハッカソンにチューターとして参加しました。担当したチームがGoogle賞をいただきました。
-  links:
-    - title: Article
-      url: https://ryought.app/shop
-    - title: GitHub
-      url: fuga
 
 - title: 'Intercollegiate Celtic Festival Web'
-  description: 国内のケルト音楽サークルの合宿イベントICFのwebサイトをアップデートしました。
+  description: 国内のケルト音楽サークルの合宿イベントICFのwebサイトをアップデートしました。powered by Jekyll and Github Pages.
   image: /assets/icf.png
   links:
     - title: ICF Official
-      url: https://ryought.app/shop
+      url: https://icf-shamrock.com/
 
 - title: 'QRDrone'
   description: ドローン(quadcopter)のファームウェア・実機を自作しました。2013年に高校の文化祭での展示物として作成しました。
