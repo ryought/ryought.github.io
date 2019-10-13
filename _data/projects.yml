@@ -17,31 +17,35 @@
 
 - title: 'mummer-idotplot'
   description: 配列解析に欠かせないドットプロットをインタラクティブに表示するツールを作りました。
+  image: /assets/dotplot.png
   links:
-    - title: Build Log
-      url: https://os.mbed.com/users/ryought/notebook/qrdronembed_quadcopter-building-log/
-    - title: mbed Repository
-      url: https://os.mbed.com/users/ryought/notebook/qrdrone/
+    - title: pip
+      url: https://pypi.org/project/mummer-idotplot/
+    - title: GitHub
+      url: https://github.com/ryought/mummer-idotplot
 
 - title: 'github-md-math-renderer'
   description: GitHub上にあるmarkdown形式のファイルをMathJaxによる数式表示付きでプレビューするhtmlです。
+  image: /assets/math.png
   links:
-    - title: Build Log
-      url: https://os.mbed.com/users/ryought/notebook/qrdronembed_quadcopter-building-log/
-    - title: mbed Repository
-      url: https://os.mbed.com/users/ryought/notebook/qrdrone/
+    - title: Demo
+      url: https://ryought.app/github-md-math-renderer/#https://raw.githubusercontent.com/ryought/github-md-math-renderer/master/README.md
+    - title: GitHub
+      url: https://github.com/ryought/github-md-math-renderer
 
 - title: 'papier'
   description: cliベースで管理するミニマルな文献管理ツールです。
 
 - title: 'webdion'
   description: キーボードで遊べるアコーディオンです。traditional melodeon/button accordion on your browser
+  image: /assets/webdion.png
   links:
     - title: Demo
       url: https://ryought.app/webdion/
 
 - title: 'scatter-sampler'
   description: 2次元分布のテストデータを生成してcsvでダウンロードするwebページ
+  image: /assets/scatter.png
   links:
     - title: Demo
       url: https://ryought.app/scatter-sampler/web/index.html
@@ -50,7 +54,10 @@
 
 - title: 'latex-cheat-sheet'
   description: デスクトップ背景にできるLaTeXのチートシート
+  image: /assets/latex.png
   links:
+    - title: Download
+      url: https://github.com/ryought/latex-cheat-sheet/raw/master/kabegami.pdf
     - title: GitHub
       url: https://github.com/ryought/latex-cheat-sheet
 
