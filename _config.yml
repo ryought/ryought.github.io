@@ -2,7 +2,7 @@ title: Ryought::Lab
 title_separator: "|"
 email: ryonakabayashi@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Ryo Nakabayashi(ryought) Bioinfomatics and Web Engineer
+  Ryo Nakabayashi(ryought) Bioinformatics and Web Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ryought.app" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -21,11 +21,6 @@ comments:
   disqus:
     shortname: "ryought-lab"
 
-analytics:
-  provider: "google-gtag"
-  google:
-    tracking_id: "UA-118388145-1"
-
 markdown: kramdown
 kramdown:
   input: GFM
@@ -36,25 +31,6 @@ plugins:
   - jekyll-sitemap
   - jemoji
 
-# permalink: /logs/:title/
-# paginate: 5
-# paginate_path: /logs/page:num
-
-# defaults:
-#   # _postsの投稿全てに適用される
-#   - scope:
-#       path: ""
-#       type: posts
-#     values:
-#       layout: single
-#       comments: true
-#       share: true
-#       related: true
-#       math: false
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
 include:
   - .htaccess
   - _pages/
