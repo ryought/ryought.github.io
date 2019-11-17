@@ -13,9 +13,9 @@ layout: default
       <p>Ryought::Lab - Logs</p>
       <div class="section-spacer"></div>
       <p>{{ page.date | date_to_long_string }}</p>
-      {% for cat in page.categories %}
+      {% for tag in page.tags %}
       <span class="mdl-chip">
-        <span class="mdl-chip__text">{{ cat }}</span>
+        <span class="mdl-chip__text">{{ tag }}</span>
       </span>
       {% endfor %}
     </div>
