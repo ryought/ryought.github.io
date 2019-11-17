@@ -9,7 +9,7 @@ title: About Me
       <h2 class="mdl-card__title-text">About Me</h2>
     </div>
     <div class="mdl-color-text--grey-700 mdl-card__supporting-text text">
-      {% capture aboutme %}{% include_relative aboutme.md %}{% endcapture %}
+      {% capture aboutme %}{% include_relative _includes/aboutme.md %}{% endcapture %}
       {{ aboutme | markdownify }}
     </div>
   </div>
@@ -19,7 +19,7 @@ title: About Me
       <h2 class="mdl-card__title-text">Publications</h2>
     </div>
     <div class="mdl-color-text--grey-700 mdl-card__supporting-text text">
-      {% capture publications %}{% include_relative publications.md %}{% endcapture %}
+      {% capture publications %}{% include_relative _includes/publications.md %}{% endcapture %}
       {{ publications | markdownify }}
     </div>
   </div>
