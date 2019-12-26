@@ -4,8 +4,7 @@ email: ryonakabayashi@gmail.com
 description: >-
   Ryo Nakabayashi (ryought) Bioinformatics and web engineer
 baseurl: ""
-url: "http://127.0.0.1:4000"
-# url: "https://ryought.app"
+url: "https://ryought.app"
 
 # Build settings
 markdown: kramdown
