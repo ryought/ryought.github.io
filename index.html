@@ -1,70 +1,37 @@
 ---
-layout: default
-title: Home
+layout: home
 ---
-{% include top.html %}
 
-<section>
-  <div class="content mdl-grid" id="content">
-    <div class="mdl-cell mdl-cell--12-col">
-      <h3 class="heading"></h3>
-    </div>
-    <div class="theme-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-desktop">
-      <div class="mdl-card__title" style="background: url('/assets/dev.png') center / cover; color: white;">
-        <h2 class="mdl-card__title-text">Web Developper</h2>
-      </div>
-      <div class="mdl-card__supporting-text">
-        Frontend and backend web
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a href="/details" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-          Read More
-        </a>
-      </div>
-    </div>
-    <div class="theme-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-desktop">
-      <div class="mdl-card__title" style="background: url('/assets/bio.png') center / cover;">
-        <h2 class="mdl-card__title-text">Bioinformatics Research</h2>
-      </div>
-      <div class="mdl-card__supporting-text">
-        Genome scaffolding, genome scale algorithm designing, probabilistic modeling, biological image processing with CNN
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a href="/details" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-          Read More
-        </a>
-      </div>
-    </div>
-    <div class="theme-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-desktop">
-      <div class="mdl-card__title" style="background: url('/assets/robot.png') center / cover; color: white;">
-        <h2 class="mdl-card__title-text">Robotics/Hardware</h2>
-      </div>
-      <div class="mdl-card__supporting-text">
-        I joined several robot competitions, and have an experience of robot software development with ROS, and rapid prototyping with Arduino/mbed/3D printing.
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a href="/details" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-          Read More
-        </a>
-      </div>
-    </div>
-    <div class="theme-card mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-desktop">
-      <div class="mdl-card__title" style="background: url('/assets/music.png') center / cover; color: white;">
-        <h2 class="mdl-card__title-text">Melodeon</h2>
-      </div>
-      <div class="mdl-card__supporting-text">
-        As a hobby, I play Irish traditional music on the one-row melodeon.
-      </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a href="/details" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-          Read More
-        </a>
-      </div>
-      <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-          <i class="material-icons">share</i>
-        </button>
-      </div>
-    </div>
+<style>
+.intro {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-wrap: wrap; /* Safari */
+  flex-wrap: wrap;
+}
+.intro-text {
+  width: 80%;
+  text-align: left;
+  word-break: break-all;
+}
+.intro-image {
+  width: 20%;
+}
+
+@media(max-width: 600px){
+  .card {
+    width: 100%;
+  }
+}
+</style>
+
+<h2>About this page</h2>
+<div class="intro">
+  <div class="intro-text">
+    <p>I'm Ryo Nakabayashi (中林 亮), in Tokyo, Japan.</p>
+    <p>The University of Tokyo, M1</p>
   </div>
-</section>
+  <div class="intro-image">
+    <img src="/assets/ryought.jpg" width="200"/>
+  </div>
+</div>

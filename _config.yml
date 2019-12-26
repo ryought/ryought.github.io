@@ -1,55 +1,48 @@
 title: Ryought::Lab
-title_separator: "|"
+author: Ryo Nakabayashi
 email: ryonakabayashi@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Ryo Nakabayashi(ryought) Bioinformatics and Web Engineer
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ryought.app" # the base hostname & protocol for your site, e.g. http://example.com
+description: >-
+  Ryo Nakabayashi (ryought) Bioinformatics and web engineer
+baseurl: ""
+url: "http://127.0.0.1:4000"
+# url: "https://ryought.app"
 
-author:
-  name: "Ryo Nakabayashi"
-  avatar: "assets/ryought.jpg"
-  bio: "UTokyo BioInfo B4"
-  location: "Tokyo, Japan"
-  email: "nakabayashi@gmail.com"
-  github: "ryought"
-  twitter: "ryought"
-
-# 投稿のコメント欄 disqusを使う
-comments:
-  provider: "disqus"
-  disqus:
-    shortname: "ryought-lab"
-
+# Build settings
 markdown: kramdown
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
-  footnote_nr: 1
-
+theme: minima
 plugins:
+  - jekyll-feed
   - jekyll-sitemap
-  - jemoji
 
 sitemap:
   file: "/sitemap.xml"
-  include_posts:
-    - index.html
-    - details.html
-    - projects.html
+  # include_posts:
+    # - index.html
+    # - about.html
+    # - projects.html
 
-include:
-  - .htaccess
-  - _pages/
+# minima-specific settings
+# https://github.com/jekyll/minima/tree/v2.5.0
+show_excerpts: true
+twitter_username: ryought
+github_username:  ryought
+facebook_username: ryo.nakabayashi
+rss: rss
+header_pages:
+  - about.md
+  - projects.html
+minima:
+  date_format: "%Y-%m-%d"
+  disqus:
+    shortname: "ryought-lab"
+
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - old/  # old ryought::lab website sources
-  - README.md
-  - Makefile
-encoding: "utf-8"
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

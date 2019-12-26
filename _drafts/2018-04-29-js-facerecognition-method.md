@@ -5,6 +5,8 @@ categories: js face-recognition
 math: true
 ---
 
+クライアントサイドのFace Recognition
+
 # 経緯
 ホゲホゲ
 

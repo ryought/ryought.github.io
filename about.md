@@ -1,3 +1,9 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
 ## Affiliation
 - Education
     - [Department of Bioinformatics and Systems Biology, Faculty of Science, The University of Tokyo](http://www.bs.s.u-tokyo.ac.jp/bioinfo/) 2015/04 - 2019/03
@@ -13,6 +19,11 @@
 - Melodeon Player
     - Féile Tokyo 2019 Melodeon(Senior), Duets(Senior)
     - Intercollegeate Celtic Festival (web)
+
+## Publications
+- <u>中林 亮</u>, 粘菌細胞集団の自己組織的回転運動の解析, 定量生物学の会 第八回年会, 2016 (ポスター発表)
+- <u>Ryo Nakabayashi</u>, Shinichi Morishita, A probabilistic model to determine contig orientation in chromosome-length scaffolds by Hi-C, 第13回国際ゲノム会議, 2019 (ポスター発表)
+- <u>Ryo Nakabayashi</u>, Shinichi Morishita, HiC-Hiker: A probabilistic model to determine contig orientation in chromosome-length scaffolds by Hi-C, ASHG 2019 Annual Meeting, Houston, 2019 (ポスター発表)
 
 ## Skills
 - Web
@@ -45,3 +56,4 @@
     - Program Calculation, Haskell
     - Information Geometry
     - User Interface
+

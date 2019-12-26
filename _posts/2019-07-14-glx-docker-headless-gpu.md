@@ -1,4 +1,5 @@
 ---
+layout: post
 title:  "OpenGL/GLXを使うXアプリケーションをkubernetes/dockerコンテナ内でheadlessに動かした話"
 date:   2019-07-14 12:00:00 +0900
 tags: Docker GLX Unity
