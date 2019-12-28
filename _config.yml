@@ -34,8 +34,8 @@ header_pages:
   - projects.html
 minima:
   date_format: "%Y-%m-%d"
-  disqus:
-    shortname: "ryought-lab"
+disqus:
+  shortname: "ryought-lab"
 
 exclude:
   - Gemfile
