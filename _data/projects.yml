@@ -13,7 +13,7 @@
     - title: Special Page
       url: https://ryought.app/shop
     - title: SoundCloud
-      url: fuga
+      url: https://soundcloud.com/ryought
 
 - title: 'mummer-idotplot'
   description: 配列解析に欠かせないドットプロットをインタラクティブに表示するツールを作りました。
