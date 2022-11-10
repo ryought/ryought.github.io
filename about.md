@@ -30,7 +30,7 @@ permalink: /about/
 
 ## Papers
 ### Peer-reviewed
-- <u>Ryo Nakabayashi</u>, Shinichi Morishita, HiC-Hiker: a probabilistic model to determine contig orientation in chromosome-length scaffolds with Hi-C, Bioinformatics, Volume 36, Issue 13, July 2020, Pages 3966–3974, https://doi.org/10.1093/bioinformatics/btaa288
+- <u>Ryo Nakabayashi</u>, Shinichi Morishita, HiC-Hiker: a probabilistic model to determine contig orientation in chromosome-length scaffolds with Hi-C, Bioinformatics, Volume 36, Issue 13, July 2020, Pages 3966–3974, [https://doi.org/10.1093/bioinformatics/btaa288](https://doi.org/10.1093/bioinformatics/btaa288)
 
 ### Thesis for a degree
 - <u>Ryo Nakabayashi</u>, A targeted haplotype-resolved assembly of the human killer cell immunoglobulin-like receptor region by chunking and clustering, 2021, master thesis
@@ -45,6 +45,10 @@ permalink: /about/
 ## Teaching
 
 - Teaching Assistant "Basic Laboratory Work in Information Science"(情報基礎実験) 2021/12
+
+## Talks
+
+- [東京大学理学部 Open Campus 2022 Online](https://www.s.u-tokyo.ac.jp/ja/event/open-campus/2022/) 学生講演 "情報科学で読み解くゲノムの中身" [YouTube](https://www.youtube.com/watch?v=3dynxihe0_s)
 
 ## Programs
 
